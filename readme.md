@@ -1,6 +1,6 @@
 # Harp Slides Boilerplate
 
-Make slide presentations with Harp.
+Make slide presentations with [Harp](https://harpjs.com/).
 
 ## Usage
 
@@ -14,7 +14,7 @@ Now visit [localhost:9000](http://localhost:9000) in your browser.
 
 ## Slides
 
-All slides are contained in [index.jade](https://github.com/jongacnik/hb-slides/public/index.jade):
+All slides are contained in [index.jade](https://github.com/jongacnik/hb-slides/blob/master/public/index.jade):
 
 ```jade
 .slide#title
@@ -44,9 +44,9 @@ http://localhost:9000/#2
 
 ## Customization
 
-Add custom css to your presentation in [theme.css](https://github.com/jongacnik/hb-slides/public/theme.css). You also have all the utility classes from [gr8](https://github.com/jongacnik/gr8) at your disposal as well.
+Add custom css to your presentation in [theme.css](https://github.com/jongacnik/hb-slides/blob/master/public/theme.css). You also have all the utility classes from [gr8](https://github.com/jongacnik/gr8) at your disposal as well.
 
-Add custom javascript to your presentation in [theme.js](https://github.com/jongacnik/hb-slides/public/theme.js). You can hook onto a `slidechange` event for triggering custom js per slide:
+Add custom javascript to your presentation in [theme.js](https://github.com/jongacnik/hb-slides/blob/master/public/theme.js). You can hook onto a `slidechange` event for triggering custom js per slide:
 
 ```js
 window.addEventListener('slidechange', function (e) {
@@ -54,4 +54,4 @@ window.addEventListener('slidechange', function (e) {
 })
 ```
 
-If you really wanna overwrite the base css/js, take a peek in [base](https://github.com/jongacnik/hb-slides/public/base).
+If you really wanna overwrite the base css/js, take a peek in [base](https://github.com/jongacnik/hb-slides/tree/master/public/base).

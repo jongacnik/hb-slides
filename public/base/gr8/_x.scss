@@ -1,0 +1,69 @@
+.x  { display: flex }
+.xx { flex: 1 }
+.xa { flex: 1 1 auto }
+.xn { flex: none }
+
+.xw  { flex-wrap: wrap }
+.xwr { flex-wrap: wrap-reverse }
+.xwn { flex-wrap: nowrap }
+
+.xac { align-items: center }
+.xab { align-items: baseline }
+.xas { align-items: stretch }
+.xafs { align-items: flex-start }
+.xafe { align-items: flex-end }
+
+.xdr  { flex-direction: row }
+.xdrr { flex-direction: row-reverse }
+.xdc  { flex-direction: column }
+.xdcr { flex-direction: column-reverse }
+
+.xjc { justify-content: center }
+.xjb { justify-content: space-between }
+.xja { justify-content: space-around }
+.xjs { justify-content: flex-start }
+.xje { justify-content: flex-end }
+
+.xot { order: -1 }
+.xob { order: 99 }
+@for $i from 1 through 4 {
+  .xo#{$i} { order: #{$i} }
+}
+
+@if $resp {
+  @each $bpn, $bp in $bps {
+    @media #{$bp} {
+      [#{$bpn}~="x"]  { display: flex }
+      [#{$bpn}~="xx"] { flex: 1 }
+      [#{$bpn}~="xa"] { flex: 1 1 auto }
+      [#{$bpn}~="xn"] { flex: none }
+
+      [#{$bpn}~="xw"]  { flex-wrap: wrap }
+      [#{$bpn}~="xwr"] { flex-wrap: wrap-reverse }
+      [#{$bpn}~="xwn"] { flex-wrap: nowrap }
+
+      [#{$bpn}~="xac"] { align-items: center }
+      [#{$bpn}~="xab"] { align-items: baseline }
+      [#{$bpn}~="xas"] { align-items: stretch }
+      [#{$bpn}~="xafs"] { align-items: flex-start }
+      [#{$bpn}~="xafe"] { align-items: flex-end }
+
+      [#{$bpn}~="xdr"]  { flex-direction: row }
+      [#{$bpn}~="xdrr"] { flex-direction: row-reverse }
+      [#{$bpn}~="xdc"]  { flex-direction: column }
+      [#{$bpn}~="xdcr"] { flex-direction: column-reverse }
+
+      [#{$bpn}~="xjc"] { justify-content: center }
+      [#{$bpn}~="xjb"] { justify-content: space-between }
+      [#{$bpn}~="xja"] { justify-content: space-around }
+      [#{$bpn}~="xjs"] { justify-content: flex-start }
+      [#{$bpn}~="xje"] { justify-content: flex-end }
+
+      [#{$bpn}~="xot"] { order: -1 }
+      [#{$bpn}~="xob"] { order: 99 }
+      @for $i from 1 through 4 {
+        [#{$bpn}~="xo#{$i}"] { order: #{$i} }
+      }
+    }
+  }
+}

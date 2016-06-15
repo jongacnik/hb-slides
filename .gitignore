@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules
+components
+bower_components
+
+# Compile directories
+www/

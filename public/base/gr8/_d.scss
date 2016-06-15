@@ -1,0 +1,23 @@
+.dn  { display: none }
+.db  { display: block }
+.dib { display: inline-block }
+.di  { display: inline }
+.dt  { display: table }
+.dtc { display: table-cell }
+.dtr { display: table-row }
+.dx  { display: flex }
+
+@if $resp {
+  @each $bpn, $bp in $bps {
+    @media #{$bp} {
+      [#{$bpn}~="dn"]  { display: none }
+      [#{$bpn}~="db"]  { display: block }
+      [#{$bpn}~="dib"] { display: inline-block }
+      [#{$bpn}~="di"]  { display: inline }
+      [#{$bpn}~="dt"]  { display: table }
+      [#{$bpn}~="dtc"] { display: table-cell }
+      [#{$bpn}~="dtr"] { display: table-row }
+      [#{$bpn}~="dx"]  { display: flex }
+    }
+  }
+}
